@@ -407,6 +407,31 @@ a {
 
 .timeline-content {
   padding-left: 15px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.timeline-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.timeline-thumb {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+  opacity: 0.85;
+  transition: opacity 0.3s, transform 0.3s;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-thumb:hover {
+  opacity: 1;
+  transform: scale(1.08);
 }
 
 .timeline-artist {
@@ -692,6 +717,11 @@ a {
 
   .timeline-artist {
     font-size: 0.82rem;
+  }
+
+  .timeline-thumb {
+    width: 65px;
+    height: 65px;
   }
 
   .works-grid {
