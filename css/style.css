@@ -1,0 +1,719 @@
+/* =============================================
+   Susumu Matahira - Biography HP
+   Inspired by kurigami.net
+   ============================================= */
+
+/* Reset & Base */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  color: #2c2c2c;
+  background: #faf8f5;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =============================================
+   Navigation
+   ============================================= */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  padding: 0 20px;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(180, 150, 100, 0.15);
+  transition: background 0.4s;
+}
+
+.site-nav a {
+  display: block;
+  padding: 18px 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.3s, border-bottom-color 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: #d4b896;
+  border-bottom-color: #d4b896;
+}
+
+/* =============================================
+   Hero Section
+   ============================================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #0a0a0f;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, rgba(180, 150, 100, 0.08) 0%, transparent 70%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.5em;
+  color: rgba(212, 184, 150, 0.6);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  letter-spacing: 0.35em;
+  color: rgba(212, 184, 150, 0.7);
+  margin-top: 25px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.hero-sub {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 15px;
+  letter-spacing: 0.15em;
+}
+
+.hero-line {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(212, 184, 150, 0.5), transparent);
+  margin: 50px auto 0;
+}
+
+/* =============================================
+   Section Base
+   ============================================= */
+.section {
+  padding: 100px 40px;
+}
+
+.section-dark {
+  background: #0a0a0f;
+  color: #e8e4df;
+}
+
+.section-accent {
+  background: #f3efe8;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #b49660;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+}
+
+.section-dark .section-title {
+  color: #fff;
+}
+
+.section-divider {
+  width: 60px;
+  height: 1px;
+  background: #d4b896;
+  margin: 20px auto 0;
+}
+
+/* =============================================
+   Philosophy Section
+   ============================================= */
+.philosophy {
+  padding: 120px 40px;
+  background: #0a0a0f;
+  text-align: center;
+}
+
+.philosophy-quote {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 400;
+  line-height: 2.4;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.08em;
+}
+
+.philosophy-quote::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #d4b896;
+  margin: 0 auto 40px;
+}
+
+.philosophy-quote::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #d4b896;
+  margin: 40px auto 0;
+}
+
+/* =============================================
+   Biography Section
+   ============================================= */
+.biography-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.bio-photo-wrap {
+  position: sticky;
+  top: 100px;
+}
+
+.bio-photo {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.bio-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #333;
+  margin-top: 20px;
+}
+
+.bio-name-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  color: #999;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+.bio-credential {
+  font-size: 0.78rem;
+  color: #b49660;
+  letter-spacing: 0.05em;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.bio-text {
+  font-size: 0.92rem;
+  line-height: 2.2;
+  color: #444;
+  font-weight: 300;
+}
+
+.bio-text p {
+  margin-bottom: 1.5em;
+}
+
+.bio-text-en {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: #888;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #e8e4df;
+}
+
+.bio-text-en p {
+  margin-bottom: 1.2em;
+}
+
+/* =============================================
+   Book Section
+   ============================================= */
+.book-card {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  background: #f9f6f1;
+  border: 1px solid #ebe5da;
+  border-radius: 6px;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.book-img {
+  width: 110px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-info-title {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.book-info-text {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* =============================================
+   Timeline / Chronology Section
+   ============================================= */
+.timeline-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 80px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(212, 184, 150, 0.3);
+}
+
+.timeline-decade {
+  margin-bottom: 10px;
+}
+
+.timeline-decade-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: rgba(212, 184, 150, 0.4);
+  letter-spacing: 0.1em;
+  padding-left: 100px;
+  margin-bottom: 5px;
+}
+
+.timeline-year-group {
+  margin-bottom: 5px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 30px;
+  padding: 8px 0;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 76px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #0a0a0f;
+  border: 2px solid #d4b896;
+}
+
+.timeline-item.has-note::before {
+  background: #d4b896;
+}
+
+.timeline-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #d4b896;
+  text-align: right;
+  padding-top: 2px;
+}
+
+.timeline-content {
+  padding-left: 15px;
+}
+
+.timeline-artist {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #e8e4df;
+  letter-spacing: 0.03em;
+}
+
+.timeline-venue {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 3px;
+}
+
+.timeline-note {
+  font-size: 0.75rem;
+  color: #d4b896;
+  margin-top: 3px;
+  font-style: italic;
+}
+
+.timeline-sub-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 30px;
+  padding: 6px 0;
+  position: relative;
+}
+
+.timeline-sub-item::before {
+  content: '';
+  position: absolute;
+  left: 77.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(212, 184, 150, 0.3);
+}
+
+.timeline-sub-item .timeline-year {
+  visibility: hidden;
+}
+
+.timeline-sub-item .timeline-content {
+  padding-left: 15px;
+}
+
+/* =============================================
+   Works Gallery Section
+   ============================================= */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.work-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.work-item:hover {
+  transform: scale(1.03);
+}
+
+.work-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  transition: filter 0.4s;
+}
+
+.work-item:hover img {
+  filter: grayscale(0%);
+}
+
+.work-item-label {
+  padding: 10px 8px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+
+/* =============================================
+   Programs Gallery
+   ============================================= */
+.programs-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 0 40px 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #d4b896 transparent;
+}
+
+.programs-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.programs-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.programs-scroll::-webkit-scrollbar-thumb {
+  background: #d4b896;
+  border-radius: 2px;
+}
+
+.program-card {
+  flex: 0 0 200px;
+  scroll-snap-align: start;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.program-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =============================================
+   Footer
+   ============================================= */
+.site-footer {
+  background: #0a0a0f;
+  text-align: center;
+  padding: 60px 40px;
+  border-top: 1px solid rgba(212, 184, 150, 0.1);
+}
+
+.footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-copy {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.25);
+  margin-top: 15px;
+  letter-spacing: 0.1em;
+}
+
+/* =============================================
+   Lightbox
+   ============================================= */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.92);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* =============================================
+   Animations
+   ============================================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================================
+   Responsive
+   ============================================= */
+@media screen and (max-width: 768px) {
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 0 5px;
+  }
+
+  .site-nav a {
+    padding: 12px 10px;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  .philosophy {
+    padding: 80px 20px;
+  }
+
+  .philosophy-quote {
+    font-size: 0.95rem;
+    line-height: 2.2;
+  }
+
+  .biography-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .bio-photo-wrap {
+    position: static;
+    text-align: center;
+  }
+
+  .bio-photo {
+    width: 180px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .bio-name, .bio-name-en, .bio-credential {
+    text-align: center;
+  }
+
+  .timeline-container::before {
+    left: 50px;
+  }
+
+  .timeline-item,
+  .timeline-sub-item {
+    grid-template-columns: 50px 1fr;
+    gap: 20px;
+  }
+
+  .timeline-item::before {
+    left: 46px;
+  }
+
+  .timeline-sub-item::before {
+    left: 47.5px;
+  }
+
+  .timeline-decade-label {
+    padding-left: 70px;
+    font-size: 1.4rem;
+  }
+
+  .timeline-year {
+    font-size: 0.9rem;
+  }
+
+  .timeline-artist {
+    font-size: 0.82rem;
+  }
+
+  .works-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+  }
+
+  .work-item img {
+    height: 130px;
+  }
+
+  .program-card {
+    flex: 0 0 150px;
+  }
+
+  .program-card img {
+    height: 210px;
+  }
+
+  .book-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
