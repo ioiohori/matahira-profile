@@ -17,8 +17,8 @@ html {
 
 body {
   font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
-  color: #2c2c2c;
-  background: #faf8f5;
+  color: #e8e4df;
+  background: #0a0a0f;
   line-height: 1.8;
   overflow-x: hidden;
 }
@@ -153,7 +153,8 @@ a {
 }
 
 .section-accent {
-  background: #f3efe8;
+  background: #14141b;
+  color: #e8e4df;
 }
 
 .section-inner {
@@ -182,7 +183,8 @@ a {
   letter-spacing: 0.15em;
 }
 
-.section-dark .section-title {
+.section-dark .section-title,
+.section-accent .section-title {
   color: #fff;
 }
 
@@ -235,7 +237,7 @@ a {
    ============================================= */
 .biography-layout {
   display: grid;
-  grid-template-columns: 175px 1fr;
+  grid-template-columns: 122px 1fr;
   gap: 60px;
   align-items: start;
 }
@@ -248,29 +250,29 @@ a {
 .bio-photo {
   width: 100%;
   border-radius: 4px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .bio-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: #333;
-  margin-top: 20px;
+  color: #fff;
+  margin-top: 16px;
 }
 
 .bio-name-en {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 0.85rem;
-  color: #999;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.08em;
   margin-top: 4px;
 }
 
 .bio-credential {
-  font-size: 0.78rem;
-  color: #b49660;
+  font-size: 0.7rem;
+  color: #d4b896;
   letter-spacing: 0.05em;
   margin-top: 8px;
   line-height: 1.6;
@@ -279,7 +281,7 @@ a {
 .bio-text {
   font-size: 0.92rem;
   line-height: 2.2;
-  color: #444;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 300;
 }
 
@@ -290,10 +292,10 @@ a {
 .bio-text-en {
   font-size: 0.85rem;
   line-height: 1.9;
-  color: #888;
+  color: rgba(255, 255, 255, 0.55);
   margin-top: 40px;
   padding-top: 40px;
-  border-top: 1px solid #e8e4df;
+  border-top: 1px solid rgba(212, 184, 150, 0.2);
 }
 
 .bio-text-en p {
@@ -307,8 +309,8 @@ a {
   display: flex;
   gap: 30px;
   align-items: flex-start;
-  background: #f9f6f1;
-  border: 1px solid #ebe5da;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 184, 150, 0.2);
   border-radius: 6px;
   padding: 30px;
   margin-top: 50px;
@@ -318,34 +320,34 @@ a {
   width: 110px;
   flex-shrink: 0;
   border-radius: 3px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .book-info-title {
   font-weight: 500;
   font-size: 0.95rem;
-  color: #333;
+  color: #fff;
   margin-bottom: 10px;
 }
 
 .book-info-text {
   font-size: 0.85rem;
   line-height: 1.8;
-  color: #666;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .book-list {
   margin-top: 30px;
   padding: 25px 30px;
-  background: #f9f6f1;
-  border: 1px solid #ebe5da;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 184, 150, 0.2);
   border-radius: 6px;
 }
 
 .book-list-heading {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #333;
+  color: #fff;
   margin-bottom: 15px;
   letter-spacing: 0.05em;
 }
@@ -358,7 +360,7 @@ a {
 
 .book-list-items li {
   padding: 10px 0;
-  border-top: 1px solid #ebe5da;
+  border-top: 1px solid rgba(212, 184, 150, 0.15);
   font-size: 0.88rem;
   line-height: 1.6;
   display: flex;
@@ -372,11 +374,11 @@ a {
 }
 
 .book-list-title {
-  color: #333;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .book-list-meta {
-  color: #888;
+  color: rgba(255, 255, 255, 0.45);
   font-size: 0.8rem;
 }
 
@@ -627,13 +629,14 @@ a {
   scroll-snap-align: start;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
 .program-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
 .program-card img {
@@ -746,7 +749,7 @@ a {
   }
 
   .bio-photo {
-    width: 130px;
+    width: 91px;
     margin: 0 auto;
     display: block;
   }
