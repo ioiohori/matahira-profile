@@ -28,10 +28,10 @@
 <!-- Hero                                          -->
 <!-- ============================================= -->
 <section class="hero" id="top">
+  <div class="hero-tile-bg" id="heroTileBg" aria-hidden="true"></div>
   <div class="hero-content">
     <div class="hero-label">Creative Producer</div>
     <h1 class="hero-name">Susumu Matahira</h1>
-    <div class="hero-title">Creative Producer &mdash; Tokyo / London</div>
     <div class="hero-sub">又平 享</div>
     <div class="hero-line"></div>
   </div>
@@ -943,6 +943,39 @@
 <!-- Scripts                                       -->
 <!-- ============================================= -->
 <script>
+// Hero tile background — random works montage
+(() => {
+  const tiles = [
+    'LKC midnightdream.jpg', 'LKC flowers.jpg', 'LKC bigparade.jpg', 'LKC alice.jpg',
+    'metamorphosis.jpg', 'unforgettable.jpg', 'hotshoe.jpg', 'tapdogs.jpg',
+    'snowman.jpg', 'cullberggiselle.jpg', 'SPB swanlake.jpg', 'carmen.jpg',
+    'joaquin.jpg', 'pacode.jpg', 'maria.jpg', 'gala.jpg',
+    'buenos.jpg', 'lecirque.jpg', 'davidhelfgot.jpg', 'royalballet.jpg',
+    'umoja.jpg', 'persons.jpg', 'piloboolus.jpg', 'bluesbrothers.jpg',
+    'ggs.jpg', 'soweto2.jpg', 'vittorio2.jpg', 'ilvolo2.jpg',
+    'alfred2.jpg', 'vontrapp2.jpg', 'billy.jpg', 'perez2.jpg',
+    'alvarez2.jpg', 'domingo.jpg', 'garanca.jpg', 'yundi.jpg',
+    'elizabeth2.jpg', 'jjj2.jpg'
+  ];
+  const bg = document.getElementById('heroTileBg');
+  if (!bg) return;
+
+  const shuffled = [...tiles].sort(() => Math.random() - 0.5);
+  const cols = Math.max(1, Math.ceil(window.innerWidth / 140));
+  const rows = Math.max(1, Math.ceil(window.innerHeight / 140));
+  const total = cols * rows;
+
+  const out = [];
+  for (let i = 0; i < total; i++) {
+    out.push(shuffled[i % shuffled.length]);
+  }
+
+  bg.innerHTML = out.map(name => {
+    const safe = name.replace(/ /g, '%20');
+    return `<img src="images/works/${safe}" alt="">`;
+  }).join('');
+})();
+
 // Scroll fade-in animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
