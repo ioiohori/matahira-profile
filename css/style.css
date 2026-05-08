@@ -132,10 +132,10 @@ a {
 
 .hero-label {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 0.85rem;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
   letter-spacing: 0.5em;
   color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   text-transform: uppercase;
 }
 
@@ -159,10 +159,10 @@ a {
 }
 
 .hero-sub {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.75);
-  margin-top: 15px;
-  letter-spacing: 0.15em;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  color: #fff;
+  margin-top: 22px;
+  letter-spacing: 0.25em;
 }
 
 .hero-line {
