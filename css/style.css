@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
-  color: #e8e4df;
+  color: #fff;
   background: #0a0a0f;
   line-height: 1.8;
   overflow-x: hidden;
@@ -60,7 +60,7 @@ a {
   font-size: 0.78rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.92);
   transition: color 0.3s, border-bottom-color 0.3s;
   border-bottom: 2px solid transparent;
 }
@@ -134,7 +134,7 @@ a {
   font-family: 'Cormorant Garamond', serif;
   font-size: 0.85rem;
   letter-spacing: 0.5em;
-  color: rgba(255, 255, 255, 0.85);
+  color: #fff;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
@@ -160,7 +160,7 @@ a {
 
 .hero-sub {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.75);
   margin-top: 15px;
   letter-spacing: 0.15em;
 }
@@ -181,12 +181,12 @@ a {
 
 .section-dark {
   background: #0a0a0f;
-  color: #e8e4df;
+  color: #fff;
 }
 
 .section-accent {
   background: #14141b;
-  color: #e8e4df;
+  color: #fff;
 }
 
 .section-inner {
@@ -242,7 +242,7 @@ a {
   font-size: clamp(1rem, 1.8vw, 1.25rem);
   font-weight: 400;
   line-height: 2.4;
-  color: rgba(255, 255, 255, 0.85);
+  color: #fff;
   letter-spacing: 0.08em;
 }
 
@@ -297,7 +297,7 @@ a {
 .bio-name-en {
   font-family: 'Cormorant Garamond', serif;
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.08em;
   margin-top: 4px;
 }
@@ -313,7 +313,7 @@ a {
 .bio-text {
   font-size: 0.92rem;
   line-height: 2.2;
-  color: rgba(255, 255, 255, 0.85);
+  color: #fff;
   font-weight: 300;
 }
 
@@ -324,7 +324,7 @@ a {
 .bio-text-en {
   font-size: 0.85rem;
   line-height: 1.9;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.9);
   margin-top: 40px;
   padding-top: 40px;
   border-top: 1px solid rgba(212, 184, 150, 0.2);
@@ -365,7 +365,7 @@ a {
 .book-info-text {
   font-size: 0.85rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .book-list {
@@ -406,11 +406,11 @@ a {
 }
 
 .book-list-title {
-  color: rgba(255, 255, 255, 0.85);
+  color: #fff;
 }
 
 .book-list-meta {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.8rem;
 }
 
@@ -517,7 +517,7 @@ a {
 .timeline-artist {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #e8e4df;
+  color: #fff;
   letter-spacing: 0.03em;
 }
 
@@ -544,7 +544,7 @@ a {
 
 .timeline-venue {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.8);
   margin-top: 3px;
 }
 
@@ -623,7 +623,7 @@ a {
 .work-item-label {
   padding: 10px 8px;
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   text-align: center;
   letter-spacing: 0.03em;
   line-height: 1.4;
@@ -692,12 +692,12 @@ a {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.2rem;
   letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.5);
+  color: #fff;
 }
 
 .footer-copy {
   font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.7);
   margin-top: 15px;
   letter-spacing: 0.1em;
 }
