@@ -952,9 +952,11 @@
   if (!bg) return;
 
   const shuffled = [...tiles].sort(() => Math.random() - 0.5);
-  const cellSize = window.innerWidth <= 768 ? 72 : 140;
-  const cols = Math.max(1, Math.ceil(window.innerWidth / cellSize));
-  const rows = Math.max(1, Math.ceil(window.innerHeight / cellSize));
+  const isMobile = window.innerWidth <= 768;
+  const cellW = isMobile ? 110 : 140;
+  const cellH = isMobile ? 80 : 140;
+  const cols = Math.max(1, Math.ceil(window.innerWidth / cellW));
+  const rows = Math.max(1, Math.ceil(window.innerHeight / cellH));
   const total = cols * rows;
 
   const out = [];

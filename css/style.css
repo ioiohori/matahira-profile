@@ -100,9 +100,9 @@ a {
 
 @media screen and (max-width: 768px) {
   .hero-tile-bg {
-    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
-    grid-auto-rows: 72px;
-    gap: 2px;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    grid-auto-rows: 80px;
+    gap: 3px;
   }
 }
 
@@ -110,6 +110,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 35%;
   display: block;
   filter: grayscale(10%) brightness(1);
   opacity: 0.95;
