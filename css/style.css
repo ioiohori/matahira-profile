@@ -201,11 +201,12 @@ a {
 
 .section-label {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.5em;
+  font-size: 0.95rem;
+  letter-spacing: 0.45em;
   text-transform: uppercase;
-  color: #b49660;
-  margin-bottom: 12px;
+  color: #f0dcb0;
+  margin-bottom: 14px;
+  font-weight: 500;
 }
 
 .section-title {
