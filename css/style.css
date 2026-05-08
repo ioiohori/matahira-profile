@@ -507,6 +507,7 @@ a {
   width: 240px;
   height: 160px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 4px;
   opacity: 0.92;
   transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
