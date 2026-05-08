@@ -209,6 +209,10 @@ a {
   font-weight: 500;
 }
 
+#chronology .section-label {
+  color: #fff;
+}
+
 .section-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
