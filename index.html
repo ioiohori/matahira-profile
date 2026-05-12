@@ -962,9 +962,10 @@
     out.push(shuffled[i % shuffled.length]);
   }
 
+  const dir = isMobile ? 'images/works/thumbs' : 'images/works';
   bg.innerHTML = out.map(name => {
     const safe = name.replace(/ /g, '%20');
-    return `<img src="images/works/${safe}" alt="">`;
+    return `<img src="${dir}/${safe}" alt="" loading="eager" decoding="async">`;
   }).join('');
 })();
 
