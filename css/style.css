@@ -116,6 +116,14 @@ a {
   opacity: 0.95;
 }
 
+.hero-tile-bg canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: grayscale(10%);
+  opacity: 0.95;
+}
+
 .hero::before {
   content: '';
   position: absolute;
