@@ -558,9 +558,9 @@ a {
   object-fit: cover;
 }
 
-/* ガランチャは顔が中央よりやや左寄りのため、トリミング位置を調整 */
+/* ガランチャは顔が画面右寄りのため、人物が中央に来るようトリミング位置を調整 */
 .timeline-thumb-portrait[src*="garanca"] {
-  object-position: 38% center;
+  object-position: 62% center;
 }
 
 .timeline-artist {
