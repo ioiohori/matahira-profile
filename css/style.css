@@ -660,8 +660,10 @@ a {
 
 .work-item img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: auto;
+  /* 縦長ポスターが上下で切れないよう、タイルを縦長にして画像全体を収める */
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
   display: block;
   filter: grayscale(20%);
   transition: filter 0.4s;
@@ -933,10 +935,6 @@ a {
   .works-grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 8px;
-  }
-
-  .work-item img {
-    height: 130px;
   }
 
   .program-card {
