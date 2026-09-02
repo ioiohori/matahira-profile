@@ -551,6 +551,18 @@ a {
   max-width: 46%;
 }
 
+/* 縦位置(カレーラス)と同じ 2:3 に左右をトリミングして表示 */
+.timeline-thumb-portrait {
+  width: 240px;
+  height: 360px;
+  object-fit: cover;
+}
+
+/* ガランチャは顔が中央よりやや左寄りのため、トリミング位置を調整 */
+.timeline-thumb-portrait[src*="garanca"] {
+  object-position: 38% center;
+}
+
 .timeline-artist {
   font-size: 1.15rem;
   font-weight: 500;
@@ -911,6 +923,11 @@ a {
   .timeline-thumb-lg {
     width: 150px;
     max-width: 50%;
+  }
+
+  .timeline-thumb-portrait {
+    width: 100px;
+    height: 150px;
   }
 
   .works-grid {
