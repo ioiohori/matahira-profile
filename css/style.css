@@ -545,12 +545,6 @@ a {
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.6);
 }
 
-/* 横位置(ランドスケープ)の写真は幅を広げ、縦位置の写真と同等のボリュームに揃える */
-.timeline-thumb-lg {
-  width: 480px;
-  max-width: 46%;
-}
-
 /* 縦位置(カレーラス)と同じ 2:3 に左右をトリミングして表示 */
 .timeline-thumb-portrait {
   width: 240px;
@@ -920,11 +914,6 @@ a {
     width: 100px;
     height: auto;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
-  }
-
-  .timeline-thumb-lg {
-    width: 150px;
-    max-width: 50%;
   }
 
   .timeline-thumb-portrait {
