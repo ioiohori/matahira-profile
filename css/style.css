@@ -545,6 +545,12 @@ a {
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.6);
 }
 
+/* 横位置(ランドスケープ)の写真は幅を広げ、縦位置の写真と同等のボリュームに揃える */
+.timeline-thumb-lg {
+  width: 480px;
+  max-width: 46%;
+}
+
 .timeline-artist {
   font-size: 1.15rem;
   font-weight: 500;
@@ -900,6 +906,11 @@ a {
     width: 100px;
     height: auto;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .timeline-thumb-lg {
+    width: 150px;
+    max-width: 50%;
   }
 
   .works-grid {
